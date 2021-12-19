@@ -12,7 +12,7 @@ export function Page(props: Props) {
 	const { children, ...more } = props;
 
 	const meta = {
-		title: "YingXu - Minimalism and reading experiences focused novel reading website.",
+		title: "YingXu - Focus on your novels",
 		...more,
 	};
 

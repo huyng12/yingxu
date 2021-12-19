@@ -1,1 +1,3 @@
-export const Navbar = (): JSX.Element => <div></div>;
+export function Navbar() {
+	return <div></div>;
+}
