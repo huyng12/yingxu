@@ -1,4 +1,4 @@
-import { AppPage } from "app/page/page";
+import { Page } from "app/page/page";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 
@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 };
 
 const NovelPage = (props: Props) => (
-	<AppPage>
+	<Page>
 		<Head>
 			<title>{props.info.slug} | YingXu</title>
 			<meta property="og:type" content="website" />
@@ -32,7 +32,7 @@ const NovelPage = (props: Props) => (
 		<div>
 			<h1>Novel {props.info.slug}</h1>
 		</div>
-	</AppPage>
+	</Page>
 );
 
 export default NovelPage;
