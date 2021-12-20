@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	@apply text-slate-900;
+}
+
+@layer components {
+	.btn-carousel {
+		@apply p-1.5;
+		@apply text-xl disabled:text-slate-200;
+		@apply border border-slate-200 hover:border-slate-600 disabled:hover:border-slate-200;
+	}
+}

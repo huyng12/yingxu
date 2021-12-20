@@ -1,16 +1,49 @@
-import { Page } from "app/page/page";
-import type { NextPage } from "next";
-import Head from "next/head";
+import type { GetStaticProps } from "next";
+import { Page } from "../components/app/page/page";
+import { NovelCarousel } from "../components/novel-carousel/novel-carousel";
+import { NovelRanking } from "../components/novel-ranking/novel-ranking";
+import { cms } from "../lib/cms";
+import { Novel } from "../lib/cms/types";
 
-const Home: NextPage = () => (
-	<Page>
-		<Head>
-			<title>Yingxu</title>
-		</Head>
-		<div>
-			<h1>Home</h1>
-		</div>
-	</Page>
-);
+interface Props {
+	novels: Novel[];
+}
+
+function Home(props: Props) {
+	return (
+		<Page>
+			<div className="max-w-screen-xl m-auto space-y-6 p-4">
+				<NovelCarousel
+					name="New Releases"
+					novels={[...props.novels, ...props.novels, ...props.novels]}
+				/>
+				<NovelRanking
+					rankings={[
+						{ name: "👍 Recommended", novels: props.novels },
+						{ name: "🔥 Hottest", novels: props.novels },
+						{ name: "👀 Most Viewed", novels: props.novels },
+					]}
+				/>
+				<NovelCarousel
+					name="Romance"
+					novels={[...props.novels, ...props.novels, ...props.novels]}
+				/>
+				<NovelCarousel
+					name="Fantasy"
+					novels={[...props.novels, ...props.novels, ...props.novels]}
+				/>
+			</div>
+		</Page>
+	);
+}
 
 export default Home;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+	const novels = cms.getNovels();
+	return {
+		props: {
+			novels: [...novels, ...novels, ...novels],
+		},
+	};
+};
