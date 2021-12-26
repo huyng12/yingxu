@@ -20,7 +20,7 @@ function Card(props: CardProps) {
 	return (
 		<div
 			onClick={onClick}
-			className="shrink-0 transition p-2 rounded hover:cursor-pointer hover:bg-slate-100"
+			className="shrink-0 p-2 rounded cursor-pointer md:transition md:hover:bg-slate-100"
 		>
 			<div className="relative w-[150px] lg:w-full aspect-[3/4] rounded overflow-hidden">
 				<Image

@@ -13,7 +13,7 @@ export function NovelCard(props: Props) {
 	return (
 		<div
 			onClick={onClick}
-			className="flex flex-row h-[100px] gap-4 p-2 rounded transition md:hover:cursor-pointer md:hover:bg-slate-100"
+			className="flex flex-row h-[100px] gap-4 p-2 rounded hover:cursor-pointer md:transition md:hover:bg-slate-100"
 		>
 			<div className="h-full w-[84px] rounded overflow-hidden shrink-0">
 				<Image
