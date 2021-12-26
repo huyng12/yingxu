@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "doridosim_en";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "Doridosim",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"With Kang Dol's crush on Yang Yang growing larger and larger, he decides to confess his feelings. With his back turned against her, he makes a courageous confession. But when he opens his eyes and turns around, instead of Yang Yang, he finds Min Dosim standing in front of him. Oops?! But the more shocking twist is that Dosim, the school's most popular girl, mistakenly obliges and they decide to go out! What is Kang Dol supposed to do to fix this mess?",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["Romance", "Friendship", "Crush", "Triangle", "Wholesome"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["Lee Gpiee"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const doridosimNovel: Novel = {
 	slug,
 	info,
 	episodes,

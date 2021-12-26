@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "angel";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "How to Use an Angel",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"A bunch of thugs holding a demonic invocation have kidnapped Kiom to use as their sacrificial offering. Just as she’s about to be attacked, though, the wall before her crumbles, giving way to a tall, glowing figure. The newcomer is more handsome than anyone could dream of, so pretty-faced that he seems angelic, in fact. Kiom is relieved to be rescued, but the guy seems to have mistaken her for someone else. He calls her by a strange name, and pulls out a…sword?! Will Kiom get out of this alive?",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["LoveTriangle", "PrettyBoy", "Angles", "FantasyWorld", "Romance"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["gongsa"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const howToUseAnAngelNovel: Novel = {
 	slug,
 	info,
 	episodes,

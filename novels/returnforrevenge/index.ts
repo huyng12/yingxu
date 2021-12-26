@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "returnforrevenge";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "Return for Revenge",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"When Empress Sawol was pregnant with the Emperor's child, she loses all of her loved ones and then is sentenced to death by the Emperor and her little sister, who became the imperial consort. After her death, she magically gets another chance to relive her life. Will Sawol do the right thing when faced with her past mistakes and save herself and her family? And will she be able to take on revenge against the malicious Emperor and her sister?",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["Romance", "FarEast", "Rebirth", "ComingOfAge"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["IREADER CULTURE"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const returnForRevengeNovel: Novel = {
 	slug,
 	info,
 	episodes,

@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "meowment";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "Just for a Meowment",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"Orphaned at birth and bullied at work, Myohee has been through countless trials in life. But when she gets scammed by her only friend and ends up bankrupt, Myohee feels as though she’ll never find the silver lining to her cloud. She decides to end her own life by jumping from a building, but mid-air, the grim reaper halts her descent, saying her time isn’t up yet. She’s ordered to live for 100 more days…as a cat! Before she knows it, she’s taken to the home of her handsome, aloof boss, Mr. Cha. It seems like the perfect chance to receive the love and care she never had in life…if only Myohee can remain a cat!",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["LoveTriangle", "Office", "Pets", "FantasyWorld", "Boss_Employee"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["kkanaria"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const justForAMeowmentNovel: Novel = {
 	slug,
 	info,
 	episodes,

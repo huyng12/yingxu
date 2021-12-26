@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "lucia";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "Lucia",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"Lucia is an ordinary girl...except for the fact that she is actually Princess Vivian Hesse, who can predict her future through her dreams. Those dreams tell her that what inevitably waits her is a nightmarish marriage with a horrible man. Lucia’s only hope at changing this future is Hugo Taran, the nation’s dreaded “Black Lion of the Battlefield.” Desperate to escape the fate that awaits her, Lucia decides to strike an unconventional deal with Hugo. Little does she know that this deal could bring her and Hugo together in more ways than one…",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["Drama", "Marriage", "Royalty", "Romance"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["Skye", "TARUVI"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const luciaNovel: Novel = {
 	slug,
 	info,
 	episodes,

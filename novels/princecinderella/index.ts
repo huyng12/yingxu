@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "princecinderella";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "Prince Cinderella",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"Outgoing and athletic, Darim’s always surrounded by friends. But back in elementary school, she used to be a social outcast—she only started making friends when Taehoo brought her into the fold. Now in high school, the two have drifted apart, but Darim is waiting for a chance to reunite with her icy Prince Charming. There’s just one issue: Darim’s body transforms into a boy’s at noon every day, only to turn back at midnight! Well, if she can’t get close to Taehoo as a girl… Why not try as a boy?!",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["WholeSome", "Crush", "Romance", "Highschool", "Lighthearted"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["77A0r"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const princeCinderellaNovel: Novel = {
 	slug,
 	info,
 	episodes,

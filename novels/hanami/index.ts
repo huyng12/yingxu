@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "hanami";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "You Make Me Swoon",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"Face it, high school's hard. From friends to grades to looks, everything matters. Luckily, Ha Nami's got most of that taken care of. Her grades are at the top of her class, she's got two loyal friends, and she's pretty to boot. Unfortunately, she's also got a curse. One that makes it impossible for her to talk to anyone she likes. Like... \"like\" likes.",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["Celeb", "FirstLove", "Romance", "ComingOfAge", "Trauma"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["hoi"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const youMakeMeSwoonNovel: Novel = {
 	slug,
 	info,
 	episodes,

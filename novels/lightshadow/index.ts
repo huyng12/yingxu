@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "lightshadow";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "Light and Shadow",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"When she’s sent in the stead of a nobleman’s daughter to marry a duke of low birth, servant Edna has no choice but to lie about who she is for her survival. Eli, her new husband, has a reputation for his brutality in the battlefield and loyalty to the king. If he finds out who she really is, he will not spare her. With a secret that nobody must find out about and Eli’s growing suspicions about her true identity, Edna must play a dangerous game of cat and mouse with her husband. However, as they both cautiously navigate this marriage full of lies, something true starts blooming between the two of them…",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["Drama", "Marriage", "Royalty", "Romance"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["Hee Won", "Ryu Hyang"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const lightAndShadowNovel: Novel = {
 	slug,
 	info,
 	episodes,

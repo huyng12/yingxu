@@ -2,18 +2,18 @@ import fs from "fs";
 import { Episode, Info, Novel } from "../../lib/cms/types";
 
 // Edit here
-const slug = "loveinspring";
+const slug = "hide_brother";
 
 const info: Info = {
 	// Edit here
-	name: "Love in Spring",
+	name: "Let's Hide My Little Brother",
 	// Edit here
 	summary:
-		"Jihoon is the last person to be seen with a girl. He's spent his entire life turning down girls because his heart simply does not skip a beat for any girl. And then there's Sol, whose heart beats for every man out there. Serendipitously, the two meet at their college orientation, and whereas Jihoon finds himself helplessly in love, Sol finds herself able to breath in the presence of a man for the first time ever. Jihoon needs to win her heart, but he can't even speak to her without blushing or stuttering. Luckily for Jihoon, his friends come up with a devious plan to bring Sol and Jihoon together. Will the plan work?",
+		"The fate of a girl in a BL novel is a tragic one. Girls are either vaguely helpful, evil, or add nothing to the plot. So what happens when you turn into the older sister of a BL novel protagonist? The older sister who dies a tragic death at the hands of a madman who’s infatuated with your younger brother? You go with your gut instinct: hide him. Hide your brother from everything, especially men, that could harm him and you. That’s the task that Kyla Vesta is set with in this life, and a task that she’s determined to complete.",
 	// Edit here
-	genres: ["romance", "lighthearted", "oncampus", "firstlove", "crush"],
+	genres: ["LoveTriangle", "PrettyBoy", "Knight", "FantasyWorld", "Romance"],
 	// Edit here
-	writers: ["DiDi", "Ssal"],
+	writers: ["CHAEJIHOO", "Chen Li"],
 	numEpisodes: 10,
 	thumbnail: {
 		tall: `/${slug}/thumbnails/tall.webp`,
@@ -85,7 +85,7 @@ const episodes: Episode[] = [
 ];
 
 // Edit here
-export const loveInSpringNovel: Novel = {
+export const letsHideMyLittleBrotherNovel: Novel = {
 	slug,
 	info,
 	episodes,
