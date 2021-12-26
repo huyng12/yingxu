@@ -1,6 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import Image from "next/image";
 import { Page } from "../../components/app/page/page";
+import { ListEpisodes } from "../../components/list-episodes/list-episodes";
+import { NovelDescription } from "../../components/novel-description/novel-description";
+import { NovelInfoCard } from "../../components/novel-info-card/novel-info-card";
 import { cms } from "../../lib/cms";
 import { Novel } from "../../lib/cms/types";
 
@@ -12,18 +14,17 @@ function NovelPage(props: Props) {
 	const { novel } = props;
 	return (
 		<Page title={novel.info.name}>
-			<div>
-				<h1>Novel {novel.info.name}</h1>
-				<p>{novel.info.summary}</p>
-				<p>Writers: {novel.info.writers.join(", ")}</p>
-				<p>Published {novel.info.numEpisodes} Episodes</p>
-				<Image
-					src={novel.info.thumbnail.tall}
-					width={840}
-					height={1120}
-					layout="responsive"
-					alt={`Thumbnail of ${novel.info.name}`}
-				/>
+			<div className="max-w-screen-xl m-auto space-y-6 p-4">
+				<div className="flex flex-row flex-wrap md:flex-nowrap gap-4">
+					<NovelInfoCard slug={novel.slug} info={novel.info} />
+					<div className="space-y-4">
+						<NovelDescription slug={novel.slug} info={novel.info} />
+						<ListEpisodes
+							slug={novel.slug}
+							episodes={novel.episodes}
+						/>
+					</div>
+				</div>
 			</div>
 		</Page>
 	);
