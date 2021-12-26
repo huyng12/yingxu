@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { useWindowSize } from "react-use";
@@ -14,8 +15,13 @@ interface CardProps {
 }
 
 function Card(props: CardProps) {
+	const router = useRouter();
+	const onClick = () => void router.push(`/${props.novel.slug}`);
 	return (
-		<div className="shrink-0">
+		<div
+			onClick={onClick}
+			className="shrink-0 transition p-2 rounded hover:cursor-pointer hover:bg-slate-100"
+		>
 			<div className="relative w-[150px] lg:w-full aspect-[3/4] rounded overflow-hidden">
 				<Image
 					src={props.novel.info.thumbnail.tall}
@@ -24,7 +30,7 @@ function Card(props: CardProps) {
 					priority
 				/>
 			</div>
-			<div>
+			<div className="mt-2">
 				<h1 className="lg:text-xl font-bold">
 					{props.novel.info.name}
 				</h1>
@@ -63,7 +69,7 @@ export function NovelCarousel(props: Props) {
 	return (
 		<div className="relative">
 			<h1 className="text-xl font-bold">{props.name}</h1>
-			<div className="flex flex-row lg:grid lg:grid-cols-6 gap-[24px] overflow-auto mt-3">
+			<div className="flex flex-row lg:grid lg:grid-cols-6 gap-[8px] overflow-auto mt-3">
 				{novels.map((novel, index) => (
 					<Card key={`novel-${novel.slug}-${index}`} novel={novel} />
 				))}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Novel } from "../../lib/cms/types";
 
 interface Props {
@@ -7,8 +8,13 @@ interface Props {
 }
 
 export function NovelCard(props: Props) {
+	const router = useRouter();
+	const onClick = () => void router.push(`/${props.novel.slug}`);
 	return (
-		<div className="flex flex-row h-[84px] gap-4">
+		<div
+			onClick={onClick}
+			className="flex flex-row h-[100px] gap-4 p-2 rounded transition md:hover:cursor-pointer md:hover:bg-slate-100"
+		>
 			<div className="h-full w-[84px] rounded overflow-hidden shrink-0">
 				<Image
 					src={props.novel.info.thumbnail.tall}
