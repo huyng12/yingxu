@@ -14,10 +14,12 @@ function Home(props: Props) {
 		<Page>
 			<div className="max-w-screen-xl m-auto space-y-6 p-4">
 				<NovelCarousel
+					containerId="releases"
 					name="New Releases"
 					novels={[...props.novels, ...props.novels, ...props.novels]}
 				/>
 				<NovelRanking
+					containerId="rankings"
 					rankings={[
 						{ name: "👍 Recommended", novels: props.novels },
 						{ name: "🔥 Hottest", novels: props.novels },
@@ -25,10 +27,12 @@ function Home(props: Props) {
 					]}
 				/>
 				<NovelCarousel
+					containerId="romance"
 					name="Romance"
 					novels={[...props.novels, ...props.novels, ...props.novels]}
 				/>
 				<NovelCarousel
+					containerId="fantasy"
 					name="Fantasy"
 					novels={[...props.novels, ...props.novels, ...props.novels]}
 				/>

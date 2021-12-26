@@ -7,12 +7,16 @@ interface Ranking {
 }
 
 interface Props {
+	containerId: string;
 	rankings: Ranking[];
 }
 
 export function NovelRanking(props: Props) {
 	return (
-		<div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+		<div
+			id={props.containerId}
+			className="grid grid-cols-1 lg:grid-cols-3 gap-2"
+		>
 			{props.rankings.map((ranking) => (
 				<NovelList
 					key={`ranking-${ranking.name}`}
