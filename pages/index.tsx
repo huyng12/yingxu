@@ -16,7 +16,7 @@ function Home(props: Props) {
 				<NovelCarousel
 					containerId="releases"
 					name="New Releases"
-					novels={[...props.novels, ...props.novels, ...props.novels]}
+					novels={props.novels}
 				/>
 				<NovelRanking
 					containerId="rankings"
@@ -29,12 +29,12 @@ function Home(props: Props) {
 				<NovelCarousel
 					containerId="romance"
 					name="Romance"
-					novels={[...props.novels, ...props.novels, ...props.novels]}
+					novels={props.novels}
 				/>
 				<NovelCarousel
 					containerId="fantasy"
 					name="Fantasy"
-					novels={[...props.novels, ...props.novels, ...props.novels]}
+					novels={props.novels}
 				/>
 			</div>
 		</Page>
@@ -46,8 +46,6 @@ export default Home;
 export const getStaticProps: GetStaticProps<Props> = async () => {
 	const novels = cms.getNovels();
 	return {
-		props: {
-			novels: [...novels, ...novels, ...novels],
-		},
+		props: { novels },
 	};
 };
