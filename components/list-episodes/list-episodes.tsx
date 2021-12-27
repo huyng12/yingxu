@@ -1,5 +1,8 @@
+import classNames from "classnames";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { RiSortAsc, RiSortDesc } from "react-icons/ri";
 import { Episode } from "../../lib/cms/types";
 
 interface Props {
@@ -40,11 +43,34 @@ function Item(props: ItemProps) {
 }
 
 export function ListEpisodes(props: Props) {
+	const [isListReversed, setIsListReversed] = useState(false);
+	const toggleListReversed = () => setIsListReversed((r) => !r);
 	return (
 		<div className="w-full">
 			<div className="space-y-2">
-				<h1 className="text-xl font-bold">Episodes</h1>
-				<nav className="flex flex-col">
+				<div className="relative">
+					<h1 className="text-xl font-bold">Episodes</h1>
+					<button
+						onClick={toggleListReversed}
+						className="absolute top-0 right-0"
+					>
+						{isListReversed ? (
+							<>
+								<RiSortAsc className="inline" /> Sort by Latest
+							</>
+						) : (
+							<>
+								<RiSortDesc className="inline" /> Sort by Order
+							</>
+						)}
+					</button>
+				</div>
+				<nav
+					className={classNames(
+						"flex",
+						isListReversed ? "flex-col-reverse" : "flex-col"
+					)}
+				>
 					{props.episodes.map((episode, index) => (
 						<Item
 							key={`episode-${index}`}

@@ -25,7 +25,7 @@ export function NovelInfoCard(props: Props) {
 					{props.info.numEpisodes} Episodes
 				</p>
 				<p>
-					<span className="font-bold">Writers:</span>{" "}
+					<span className="font-bold">Authors:</span>{" "}
 					{props.info.writers.join(", ")}
 				</p>
 				<p>
