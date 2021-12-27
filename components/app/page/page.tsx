@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { ReactNode } from "react";
+import { BackToTop } from "../../back-to-top/back-to-top";
 import { Navbar } from "../navbar/navbar";
 import s from "./page.module.css";
 
@@ -27,6 +28,9 @@ export function Page(props: Props) {
 			<div>
 				<Navbar />
 				<main>{props.children}</main>
+				<div className="hidden md:block md:fixed bottom-14 right-6">
+					<BackToTop />
+				</div>
 			</div>
 		</div>
 	);
