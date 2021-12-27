@@ -68,8 +68,8 @@ export function NovelCarousel(props: Props) {
 	const prevPage = () => setPage((page) => page - 1);
 
 	return (
-		<div className="relative" id={props.containerId}>
-			<h1 className="text-xl font-bold">{props.name}</h1>
+		<div className="relative scroll-m-8" id={props.containerId}>
+			<h1 className="text-2xl font-bold">{props.name}</h1>
 			<div className="flex flex-row lg:grid lg:grid-cols-6 gap-[8px] overflow-auto mt-3">
 				{novels.map((novel, index) => (
 					<Card key={`novel-${novel.slug}-${index}`} novel={novel} />
