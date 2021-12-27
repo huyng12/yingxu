@@ -9,10 +9,13 @@ interface Props {
 }
 
 export function Page(props: Props) {
-	const { children, ...more } = props;
+	const { children, title, ...more } = props;
 
 	const meta = {
-		title: "YingXu - Focus on your novels",
+		title:
+			typeof title === "undefined"
+				? "YingXu - Focus on your novels"
+				: `${title} | YingXu`,
 		...more,
 	};
 
