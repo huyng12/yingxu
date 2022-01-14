@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Novel } from "../../lib/cms/types";
+import { imageLoader } from "../../lib/image-loader/image-loader";
 
 interface Props {
 	novel: Novel;
@@ -17,6 +18,7 @@ export function NovelCard(props: Props) {
 		>
 			<div className="h-full w-[84px] rounded overflow-hidden shrink-0">
 				<Image
+					loader={imageLoader}
 					src={props.novel.info.thumbnail.tall}
 					width={840}
 					height={1120}

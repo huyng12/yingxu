@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { useWindowSize } from "react-use";
 import { Novel } from "../../lib/cms/types";
+import { imageLoader } from "../../lib/image-loader/image-loader";
 
 interface Props {
 	containerId: string;
@@ -25,6 +26,7 @@ function Card(props: CardProps) {
 		>
 			<div className="relative w-[150px] lg:w-full aspect-[3/4] rounded overflow-hidden">
 				<Image
+					loader={imageLoader}
 					src={props.novel.info.thumbnail.tall}
 					layout="fill"
 					alt={`Thumbnail of ${props.novel.info.name}`}

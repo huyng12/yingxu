@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { RiSortAsc, RiSortDesc } from "react-icons/ri";
 import { Episode } from "../../lib/cms/types";
+import { imageLoader } from "../../lib/image-loader/image-loader";
 
 interface Props {
 	slug: string;
@@ -26,6 +27,7 @@ function Item(props: ItemProps) {
 		>
 			<div className="h-full w-[84px] shrink-0">
 				<Image
+					loader={imageLoader}
 					src={props.episode.thumbnail}
 					width={156}
 					height={208}

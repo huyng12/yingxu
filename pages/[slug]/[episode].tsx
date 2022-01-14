@@ -4,6 +4,7 @@ import { Page } from "../../components/app/page/page";
 import { EpisodeNavigator } from "../../components/episode-navigator/episode-navigator";
 import { cms } from "../../lib/cms";
 import { Episode, Info } from "../../lib/cms/types";
+import { imageLoader } from "../../lib/image-loader/image-loader";
 
 interface Props {
 	slug: string;
@@ -20,6 +21,7 @@ function EpisodePage(props: Props) {
 				<div className="flex flex-row gap-4">
 					<div className="h-full w-[84px] shrink-0">
 						<Image
+							loader={imageLoader}
 							src={props.episode.thumbnail}
 							width={156}
 							height={208}

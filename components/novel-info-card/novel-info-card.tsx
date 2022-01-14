@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Info } from "../../lib/cms/types";
+import { imageLoader } from "../../lib/image-loader/image-loader";
 
 interface Props {
 	slug: string;
@@ -11,6 +12,7 @@ export function NovelInfoCard(props: Props) {
 		<div className="w-full md:w-auto">
 			<div className="w-full md:w-[360px] shrink-0">
 				<Image
+					loader={imageLoader}
 					src={props.info.thumbnail.tall}
 					width={840}
 					height={1120}
